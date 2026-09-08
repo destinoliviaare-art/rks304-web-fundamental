@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Destin Olivia Rengganis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Playfair+Display:ital,wght@1,600;1,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">Destin<span>Olivia</span></a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <span class="nav-indicator" aria-hidden="true"></span>
+    </nav>
+  </div>
+</header>
+
+<main id="konten">
+
+  <section class="section page-intro">
+    <div class="wrap contact-layout">
+      <div class="contact-intro">
+        <p class="eyebrow">// mari terhubung</p>
+        <h1>Hubungi Saya</h1>
+        <p>Terbuka untuk kolaborasi proyek, diskusi, atau sekadar ngobrol soal apa yang lagi aku kerjakan. Isi form di samping, nanti aku balas secepatnya.</p>
+        <ul class="contact-list">
+          <li>Email: destinoliviaare@gmail.com</li>
+          <li>GitHub: <a href="https://github.com/destinoliviaare-art" target="_blank" rel="noopener">github.com/destinoliviaare-art</a></li>
+          <li>Instagram: <a href="https://instagram.com/dstinolvia" target="_blank" rel="noopener">@dstinolvia</a></li>
+          <li>X: <a href="https://x.com/norieeac" target="_blank" rel="noopener">@norieeac</a></li>
+        </ul>
+      </div>
+      <form id="contact-form" novalidate>
+        <div class="form-field"><label for="fullname">Nama Lengkap</label><input type="text" id="fullname" name="fullname" required /></div>
+        <div class="form-field"><label for="email">Alamat Email</label><input type="email" id="email" name="email" required /></div>
+        <div class="form-field">
+          <label for="category">Kategori / Keperluan</label>
+          <select id="category" name="category" required>
+            <option value="" disabled selected>Pilih kategori</option>
+            <option value="konsultasi">Konsultasi</option>
+            <option value="kolaborasi">Kolaborasi Proyek</option>
+            <option value="pertanyaan">Pertanyaan Umum</option>
+          </select>
+        </div>
+        <div class="form-field"><label for="subject">Subjek <span class="hint">(opsional)</span></label><input type="text" id="subject" name="subject" /></div>
+        <div class="form-field"><label for="message">Pesan</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button type="submit" class="btn-submit">Kirim Pesan</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>&copy; 2026 Destin Olivia Rengganis.</p></div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
