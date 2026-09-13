@@ -30,7 +30,7 @@
       indicator.style.left = (rect.left - navRect.left) + 'px';
       indicator.style.top = (rect.top - navRect.top) + 'px';
       indicator.style.width = rect.width + 'px';
-      indicator.style.height = rect.height + 'px';
+      indicator.style.height = rect.height + 'px'; #sampe sini
       indicator.classList.add('is-visible');
     };
 
@@ -53,7 +53,7 @@
     if (!el) return;
 
     const finalText = el.textContent;
-    const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&$*/<>01';
+    const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&$*/<>01'; #decrypt name 
     const chars = finalText.split('').map(ch => {
       const span = document.createElement('span');
       span.className = 'char';
@@ -78,11 +78,11 @@
       const startAt = i * revealDelayPerChar;
       setTimeout(() => {
         const scrambleTimer = setInterval(() => {
-          c.span.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+          c.span.textContent = glyphs[Math.floor(Math.random() * glyphs.length)]; #decrypt name
           tick++;
           if (tick >= scrambleTicks) {
             clearInterval(scrambleTimer);
-            c.span.textContent = c.target;
+            c.span.textContent = c.target; #decrypt name
           }
         }, tickInterval);
       }, startAt);
@@ -101,7 +101,7 @@
     cards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;  // 0..1
+        const x = (e.clientX - rect.left) / rect.width;  // 0..1 #scroll reveal
         const y = (e.clientY - rect.top) / rect.height;  // 0..1
         const rotateY = (x - 0.5) * (maxTilt * 2);
         const rotateX = (0.5 - y) * (maxTilt * 2);
@@ -128,7 +128,7 @@
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting) { #scroll reveal
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
@@ -145,7 +145,7 @@
     if (!form || !status) return;
 
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
+      e.preventDefault(); #contact form logic
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
