@@ -1,0 +1,17 @@
+{
+    "target_host": "127.0.0.1",
+    "target_ip": "127.0.0.1",
+    "port_range": {
+        "start": 130,
+        "end": 140
+    },
+    "scan_time": "2026-09-28 13:53:09",
+    "total_open_ports": 1,
+    "open_ports": [
+        {
+            "port": 135,
+            "status": "OPEN",
+            "estimated_service": "Lainnya/Custom"
+        }
+    ]
+}
